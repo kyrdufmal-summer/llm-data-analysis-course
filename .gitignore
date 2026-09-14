@@ -1,34 +1,87 @@
+# =========================================================
 # Python
+# =========================================================
 __pycache__/
-*.pyc
+*.py[cod]
+*$py.class
 *.pyo
 *.pyd
 
+
+# =========================================================
+# Python package / build generated files
+# =========================================================
+*.egg
+*.egg-info/
+.eggs/
+build/
+dist/
+wheels/
+pip-wheel-metadata/
+
+
+# =========================================================
 # Virtual environments
+# =========================================================
 .venv/
 venv/
+env/
+ENV/
 .venv-airflow/
 
+
+# =========================================================
 # Jupyter
+# =========================================================
 .ipynb_checkpoints/
 
-# Environment variables
+
+# =========================================================
+# Environment variables / secrets
+# =========================================================
 .env
 *.env
 !*.env.example
 
+
+# =========================================================
+# Test / lint / coverage cache
+# =========================================================
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+
+# =========================================================
 # Data and generated outputs
+# =========================================================
+
+# Generated report outputs
 reports/outputs/*
 !reports/outputs/
 !reports/outputs/.gitkeep
+
+# Processed data
 data/processed/*
 !data/processed/
 !data/processed/.gitkeep
+
+# External/downloaded data
 data/external/*
 !data/external/
 !data/external/.gitkeep
 
+# Titanic dataset
+# prepare_titanic_data.py 등으로 다시 받을 수 있는 데이터라면 Git에서 제외
+data/titanic/*
+
+
+# =========================================================
 # Airflow runtime
+# =========================================================
 .airflow/
 automation/airflow/.env
 automation/airflow/logs/
@@ -36,11 +89,27 @@ automation/airflow/config/
 automation/airflow/plugins/
 automation/airflow/*.db
 
+
+# =========================================================
 # Generated Word publishing outputs
+# =========================================================
 book/output/docx/*
 !book/output/docx/.gitkeep
 
-# OS/editor files
+
+# =========================================================
+# Logs / temporary files
+# =========================================================
+*.log
+*.tmp
+*.temp
+*.swp
+*.swo
+
+
+# =========================================================
+# OS / editor files
+# =========================================================
 .DS_Store
 Thumbs.db
 .vscode/
